@@ -1,14 +1,11 @@
 // Rule: function name MUST start with uppercase
-function AccountCard() {
-  // 1. Logic lives here (variables, calculations)
-  const accountType = "Savings";
-  const balance = 125000;
-
-  // 2. Return JSX (what gets rendered)
+function AccountCard({ accountNumber, accountType = "Savings", balance = 0, holderName = "Unknown" }) {
   return (
-    <div className="card">
-      <h3>{accountType} Account</h3>
-      <p>Balance: ৳{balance.toLocaleString()}</p>
+    <div>
+      <h2>Account Number: {accountNumber}</h2>
+      <h3>{accountType}</h3>
+      <p>৳{balance.toLocaleString()}</p>
+      <p>{holderName}</p>
     </div>
   );
 }
