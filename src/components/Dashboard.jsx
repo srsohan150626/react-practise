@@ -1,6 +1,8 @@
 import AccountCard from './AccountCard';
 import Header from './Header';
 import UserProfile from './UserProfile';
+import Counter from './Counter';
+import TransactionList from './TransactionList';
 function Dashboard() {
 return (
   <div>
@@ -24,7 +26,8 @@ return (
         balance={350000}
         holderName="Karim Ahmed"
       />
-      
+    <Counter />
+    <TransactionList />
     </div>
  
 
